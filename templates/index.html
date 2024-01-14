@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ context.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/style.css')) }}">
+    
+</head>
+<body>
+    <div class="flex-container">
+            {% for item in context.users %}
+                
+                    <div class="flex-item">
+                        <img src={{ item.url }} alt="photo"><br>
+                        <h1 class="rang"> {{ item.first }} {{ item.last }}</h1> 
+                    </div>
+                    
+               
+            {% endfor %}
+    </div>
+    
+
+</body>
+</html>
